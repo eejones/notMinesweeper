@@ -1,13 +1,14 @@
 - provide(:title, @game.id)
 %head
-
+= debug @game
 %div{:class=>"row"}
   %aside.span4
     %section
       %div.betterheading
         %h1
           = @user.name
-            
+#{@game.gamesetup}
+= gamesetup            
 %table
   %tr
     %th Name:

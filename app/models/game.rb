@@ -9,17 +9,35 @@ class Game < ActiveRecord::Base
 #    @type=[:gametype]
 #  end
 
-  def setup
+  def gamesetup
     sizing=10
     minearray=Array.new(sizing)
     minearray.map!{Array.new(sizing,0)}
-    minearray
-    count=10
-    sizing=minearray.length
-    while count!=0 do
-      minearray[rand(10)][rand(10)]=1
-      count=count-1
-    end
+    minearray.each{|v| p v}
+#    count=10
+#    sizing=minearray.length
+#    while count!=0 do
+#      minearray[rand(10)][rand(10)]=1
+#      count=count-1
+#    end
+  end
+
+  def printgrid
+    bomber=Marshal.load( Marshal.dump(self) )
+#    if bombed==1
+#      bomber.each{|v| p v}
+#    else
+#      bomber.each do |g|
+#        g.map! do |f|
+#          if f==1
+#            0
+#          else
+#            0
+#          end
+#        end
+#      end
+      p bomber.each{|v| p v}
+#    end
   end
 
   def guess(x,y)
@@ -45,21 +63,5 @@ class Game < ActiveRecord::Base
     bombarray.printgrid(guess,bombed)
   end
 
-  def printgrid(guess,bombed)
-    bomber=Marshal.load( Marshal.dump(self) )
-    if bombed==1
-      bomber.each{|v| p v}
-    else
-      bomber.each do |g|
-        g.map! do |f|
-          if f==1
-            0
-          else
-            0
-          end
-        end
-      end
-      p bomber.each{|v| p v}
-    end
-  end
+
 end

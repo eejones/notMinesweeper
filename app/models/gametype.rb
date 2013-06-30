@@ -18,6 +18,7 @@ class Gametype < ActiveRecord::Base
 end
 
 class Minesweeper < Game
+
   def initialize
     @game.new
     minearray=Array.new(10)
