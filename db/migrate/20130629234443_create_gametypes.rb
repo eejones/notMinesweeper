@@ -1,0 +1,17 @@
+class CreateGametypes < ActiveRecord::Migration
+  def change
+    create_table :gametypes do |t|
+      t.string :title
+      t.references :game
+      t.references :user
+      t.integer :type
+      t.integer :units
+      t.timestamps
+    end
+
+    change_table :games do |t|
+      t.belongs_to :gametypes
+    end
+
+  end
+end

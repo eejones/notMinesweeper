@@ -1,0 +1,15 @@
+- provide(:title, 'Sign up')
+%h1 Sign Up Form
+%div.row
+  %div.span6.offset3
+    = render 'shared/error_messages'
+    %div
+      = form_for (@user) do |u|
+        = u.label "Name:"
+        = u.text_field :name
+        = u.label "Password"
+        = u.password_field :password
+        = u.label "Password Confirmation"
+        = u.password_field :password_confirmation
+        = u.submit "Create User Record", :class=> "btn btn-large btn-primary"
+= link_to 'Back', users_path

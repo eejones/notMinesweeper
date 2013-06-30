@@ -1,0 +1,25 @@
+- provide(:title, @user.username)
+%head
+
+%div{:class=>"row"}
+  %aside.span4
+    %section
+      %div.betterheading
+        %h1
+          = @user.username
+            
+%table
+  %tr
+    %th Name:
+  %COLGROUP
+    %COL{:width=>"200"}
+  %tr
+    %td= @user.name
+%div.form-inline
+  %br
+  %div
+    = link_to 'Edit Profile', edit_user_path(@user)
+%br
+%br
+= link_to 'Edit', edit_user_path(@user)
+= link_to 'Back', users_path

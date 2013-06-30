@@ -1,0 +1,8 @@
+%div{:class=>"center hero-unit"}
+  %h1 Playing (not)Minesweeper
+  %h2
+    Try to win!
+  - if signed_in?
+    = link_to "Play (not) Minesweeper Now!", newgame_path, :class=> "btn-custom btn-large btn-primary" 
+  - else
+    = link_to "Sign Up Now!", signup_path, :class=> "btn-custom btn-large btn-primary"

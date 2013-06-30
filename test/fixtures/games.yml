@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user: 
+  winner: false
+  tottime: 1
+  playat: 2013-06-29 14:42:05
+  type: 1
+
+two:
+  user: 
+  winner: false
+  tottime: 1
+  playat: 2013-06-29 14:42:05
+  type: 1

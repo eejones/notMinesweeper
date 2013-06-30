@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  game: 
+  type: 1
+  units: 1
+
+two:
+  game: 
+  type: 1
+  units: 1

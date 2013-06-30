@@ -1,0 +1,15 @@
+- provide(:title, "Sign in")
+%h1 Sign in
+%div.row
+  %div.span6.offset3
+    %div.awesome
+      = form_for(:session, url: sessions_path) do |m|
+        = m.label "Username"
+        = m.text_field :username
+        = m.label "Password"
+        = m.password_field :password
+        = m.submit "Sign in", class: "btn btn-large btn-primary"
+
+    %p
+      New user?
+      = link_to "Sign up now!", signup_path

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  password_digest: MyString
+  winner: false
+  tottime: 1
+  creation: 2013-06-29 14:32:20
+  type: 1
+
+two:
+  name: MyString
+  password_digest: MyString
+  winner: false
+  tottime: 1
+  creation: 2013-06-29 14:32:20
+  type: 1
